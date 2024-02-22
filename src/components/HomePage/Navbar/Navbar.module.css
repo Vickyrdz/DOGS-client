@@ -1,0 +1,54 @@
+.navbar {
+    height: 90px;
+    /* background: linear-gradient(45deg,  #fbc900, #fa7c00); */
+    background-image: url("../../../assets/navbarImg.png");
+    background-size: cover;
+}
+
+.navImg{
+    height: 100px;
+    position: relative;
+    bottom: 10px;
+}
+
+.searchbarContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: relative;
+    bottom: 73px;
+    right: 10px;
+}
+
+.input {
+    position: relative;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    border-color: #FF9800;
+    outline: none;
+    color: orange;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.button {
+    background-color: transparent;
+    font-size: 20px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+}
+
+.create {
+    position: relative;
+    bottom: 47px;
+    left: 25px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+    text-decoration: none;
+}

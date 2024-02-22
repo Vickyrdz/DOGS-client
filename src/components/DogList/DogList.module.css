@@ -1,0 +1,19 @@
+.dogListContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

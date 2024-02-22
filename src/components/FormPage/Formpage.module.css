@@ -1,0 +1,135 @@
+.formpageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 10px;
+   
+}
+
+.title{
+    font-size: 50px;
+    position: relative;
+    color: white;
+    text-shadow: -2px 0 #111827, 0 -2px #111827, 2px 0 #111827, 0 2px #111827, 2px 2px #111827, -2px -2px #111827, -2px 2px #111827, 2px -2px #111827, 6px 6px #fcb900;   
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.right{
+   
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 190px;
+    height: 550px;
+    bottom: 20px;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    right: 340px;
+    align-items: center;
+    background-color: white;
+    border: 2px solid orange;
+    border-radius: 20px;
+    width: 350px;
+    top: 10px;
+    height: 500px;
+}
+
+.button {
+    display: flex;
+    position: relative;
+    margin-bottom: 50px;
+    border: none;
+    color: white;
+    background-color: #fbb900;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:disabled{
+    cursor: no-drop;
+    background-color: lightgrey;
+}
+
+.text {
+    font-size: 15px;
+    width: 300px;
+    display: flex;
+    color: black;
+    position: relative;
+    top: 5px;
+}
+
+
+.inputLarge{
+    width: -webkit-fill-available;
+    border-radius: 3px;
+    border: 1px solid black;
+    height: 20px;
+}
+
+.inputSmall{
+    width: 100px;
+    border: 1px solid;
+    border-radius: 3px;
+    height: 20px;
+}
+
+.inputLeft{
+    width: 100px;
+    border: 1px solid;
+    border-radius: 3px;
+    height: 20px;
+    position: relative;
+    left: 20px;
+}
+
+.p{
+    color: red;
+    font-size: 12px;
+    min-height: 30px;
+}
+
+.blockContainerName {
+    position: relative;
+    height: 100px;
+}
+
+.blockContainerH {
+    position: relative;
+    bottom: 20px;
+    height: 20%;
+}
+
+.blockContainerW {
+    position: relative;
+    bottom: 40px;
+}
+
+.blockContainerLife {
+    position: relative;
+    bottom: 60px;
+}
+
+.blockContainerTemp {
+    position: relative;
+    bottom: 80px;
+}
+
+.blockContainerImage{
+    position: relative;
+    bottom: 100px;
+}
+
