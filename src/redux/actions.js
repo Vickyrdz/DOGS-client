@@ -1,4 +1,5 @@
 import axios from "axios";
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const GET_ALL_DOGS = "GET_ALL_DOGS";
 export const GET_DOG_BY_ID = "GET_DOG_BY_ID";
@@ -14,7 +15,7 @@ export const CHANGE_LOADING = "CHANGE_LOADING";
 export const getAllDogs = () => {
   return async (dispatch) => {
     try {
-      const { data } = await axios("http://localhost:3001/dogs"); // /dogs lo tiene desde rutas hecho con el controller
+      const { data } = await axios(`${API_URL}/dogs`); // /dogs lo tiene desde rutas hecho con el controller
 
       return dispatch({
         type: GET_ALL_DOGS,
@@ -28,7 +29,7 @@ export const getAllDogs = () => {
 
 export const getDogById = (id) => {
   return async (dispatch) => {
-    try {      const { data } = await axios(`http://localhost:3001/dogs/${id}`); 
+    try {      const { data } = await axios(`${API_URL}/dogs/${id}`); 
 
       return dispatch({
         type: GET_DOG_BY_ID,
@@ -43,7 +44,7 @@ export const getDogById = (id) => {
 export const findDogsByName = (searchCriteria) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios("http://localhost:3001/dogs/", {
+      const { data } = await axios(`${API_URL}/dogs/`, {
         params: {
           name: searchCriteria,
         }
@@ -64,7 +65,7 @@ export const findDogsByName = (searchCriteria) => {
 
 export const getAllTemperaments = () => {
   return async (dispatch) => {
-    try {      const { data } = await axios("http://localhost:3001/temperaments");
+    try {      const { data } = await axios(`${API_URL}/temperaments`);
 
       return dispatch({
         type: GET_ALL_TEMPERAMENTS,
@@ -105,7 +106,7 @@ export const changeOrder = (order) => {
 export const createNewDog = (newDogData, onDogCreated) => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.post('http://localhost:3001/dogs', newDogData);
+      const { data } = await axios.post(`${API_URL}/dogs`, newDogData);
       onDogCreated(data.id);
       return dispatch({
         type: CREATE_DOG,
