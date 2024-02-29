@@ -2,10 +2,10 @@ import React from "react";
 import styles from "../Card/Card.module.css"; 
 import { Link } from "react-router-dom"; 
 
-
 function Card ({
     id,
     image,
+    reference_image_id,
     name,
     height,
     weight,
@@ -14,7 +14,9 @@ function Card ({
     //Esto es porque en la api aparece esa info como objeto y quiero acceder a las propiedades 
     const heightToDisplay = typeof height === 'object' ? height.metric : height;
     const weightToDisplay = typeof weight === 'object' ? weight.metric : weight;
-    const imageToDisplay = typeof image === 'object' ? image.url : image;
+    const dataHasReferenceImageId = !!reference_image_id;
+    const imageToDisplay = dataHasReferenceImageId
+        ? `https://cdn2.thedogapi.com/images/${reference_image_id}.jpg` : image;
 
     return (
         <div className={styles.cardContainer}>

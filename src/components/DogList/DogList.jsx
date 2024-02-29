@@ -124,8 +124,9 @@ export default function DogList() {
                             <Card
                                 key={item.id}
                                 id={item.id}
-                                image={item.image}
                                 name={item.name}
+                                image={item.image}
+                                reference_image_id={item.reference_image_id}
                                 height={item.height}
                                 weight={item.weight}
                                 life_span={item.life_span}

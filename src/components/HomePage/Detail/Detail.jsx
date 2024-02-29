@@ -43,8 +43,9 @@ export default function Detail() {
         ? dogDetail.height.metric : dogDetail.height;
     const weightToDisplay = typeof dogDetail.weight === 'object' 
         ? dogDetail.weight.metric : dogDetail.weight;
-    const imageToDisplay = typeof dogDetail.image === 'object' 
-        ? dogDetail.image.url : dogDetail.image;
+    const dataHasReferenceImageId = !!dogDetail.reference_image_id;
+    const imageToDisplay = dataHasReferenceImageId
+        ? `https://cdn2.thedogapi.com/images/${dogDetail.reference_image_id}.jpg` : dogDetail.image;
 
 
     return (
